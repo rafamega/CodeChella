@@ -1,0 +1,105 @@
+.container__datas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+    margin-bottom: 2rem;
+}
+
+.container__datas__img {
+    margin: 1em;
+}
+
+.datas__img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.container__datas__conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    gap: 1em;
+    border-radius: 16px;
+}
+
+.datas__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0 1em; /* adicionado para o titulo acessibilidade e inclusao da pag xp ficasse sem grudar na borda */
+}
+
+.datas__texto {
+    line-height: 40px;
+    margin: 0 2rem;
+}
+
+.datas__link {
+    background-color: var(--roxo);
+    padding: 1em 2em;
+    border-radius: 16px;
+    display: flex;
+    gap: 1em;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--branco);
+    margin: auto;
+    box-shadow: 4px 4px #444444;
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .container__datas__img {
+        margin: 2em 4em 0  4em;
+    }
+
+    .datas__img {
+        object-position: top;
+    }
+
+    .datas__titulo {
+        padding: 0 5em;
+        line-height: 1.3em;
+    }
+
+    .datas__texto {
+        padding-bottom: 1em;
+    }
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 1440px) {
+    .container__datas {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0em 4em 2em 4em;
+        align-items: center;
+    }
+
+    .container__datas__img {
+        margin: 3em 1em;
+    }
+
+    .container__datas__conteudo {
+        width: 50%;
+        gap: 1em;
+        padding: 0;
+    }
+
+    .datas__titulo {
+        padding: 0 3em;
+    }
+
+    .datas__texto {
+        padding: 0 2em;
+    }
+
+    .datas__link {
+        margin-top: 1em;
+        padding: .8em;
+    }
+}

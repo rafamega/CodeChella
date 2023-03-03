@@ -1,0 +1,36 @@
+@import url("/style/header.css");
+@import url("/style/banner.css");
+@import url("/style/datas.css");
+@import url("/style/line-up.css");
+@import url("/style/footer.css");
+/* Expericência*/
+@import url("/style_xp/bannerXp.css");
+@import url("/style_xp/conteudoXp.css");
+/* Setores */
+@import url("/style__setores/bannerSetores.css");
+@import url("/style__setores/conteudoSetores.css");
+/* Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+:root {
+    --branco: #FFFFFF;
+    --roxo: #4650BD;
+    --verde: #008364;
+    --degrade: linear-gradient(180deg, #304968 10%, #36C1A0 52.6%, #4650BD 100%);
+    --degrade-invertido: linear-gradient(0deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+
+    --fonte-principal: 'Raleway', sans-serif;
+    --fonte-secundaria:'Calistoga', cursive;
+}
+
+body {
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+    color: var(--branco);
+}
+
+main {
+    background-image: var(--degrade);
+    background-repeat: no-repeat;
+}

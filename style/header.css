@@ -1,0 +1,88 @@
+.cabecalho {
+    background-color: var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.cabecalho__menu {
+    width: 34px;
+}
+
+.cabecalho__menu__lista {
+    position: absolute;
+    background-image: var(--degrade-invertido);
+    border: 1px solid var(--roxo);
+    top: 13%;
+    left: 15%;
+    margin: 1em 0;
+    padding: 1em 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    z-index: 2; /* como meu menu ficou encima do banner, tive que colocar ele 2 níveis acima, do banner e do texto do banner */
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 700;
+}
+
+hr {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__botao:checked ~ .cabecalho__menu__lista {
+    display: block;
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .cabecalho__menu__lista, .container__botao:checked ~ .cabecalho__menu__lista { /* para caso o botao esteja apertado na hora de aumentar o tamanho da tela */
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 2em 0 1em 0;
+        left: 0;
+        flex-direction: row;
+        padding: 0;
+        gap: 1em;
+        justify-content: space-around;
+        background-image: var(--roxo);
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        flex-direction: row;
+        padding: 2em 4em;
+    }
+
+    .cabecalho__menu__lista {
+        justify-content: end;
+        margin:    auto;
+    }
+}

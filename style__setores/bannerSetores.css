@@ -1,0 +1,51 @@
+.banner__setores {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* para a img ficar com referência ao .banner */
+    width: 100%;
+    height: 270px; /* usei a altura que estava no figma */
+}
+
+.banner__setores::before {
+    content: ""; /* ao utilizar ::before ou ::after é obrigatório colocar content, mas como não tem nada, coloca-se "" */
+    position: absolute;
+    inset: 0; /* equivale à top: 0; right: 0; bottom: 0; left: 0. */
+    background-image: url("../img/SetoresBanner.jfif"); /* é melhor usar como background img do que colocar a tag img no html pois é apenas um banner ilustrativo, não tem semântica. */
+    background-size: cover; /* faz a imagem de fundo ficar do tamanho do .banner */
+    background-position: center; /* centraliza a img no meio do banner, então come um pedacindo em cima e embaixo*/
+    opacity: 0.5;
+}
+
+.banner__setores__texto {
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 32px;
+    line-height: 1.3em;
+    z-index: 1; /* colocou o texto acima da imagem do banner, para não ficar com opacidade */
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .banner__setores {
+        height: 384px;
+    }
+
+    .banner__setores__texto {
+        font-size: 64px;
+    }
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 1440px) {
+    .banner__setores {
+        height: 407px;
+    }
+
+    .banner__setores__texto {
+        margin: 0 8em;
+    }
+}

@@ -1,0 +1,81 @@
+.container__principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.container__principal__img {
+    display: flex;
+    margin: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal__img {
+    height: 381px;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.container__principal__conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+.principal__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0 1em; /* adicionado para o titulo acessibilidade e inclusao da pag xp ficasse sem grudar na borda */
+}
+
+.principal__texto {
+    line-height: 40px;
+    margin: 0 2em;
+}
+
+@media screen and (min-width: 768px) {
+    .principal__img {
+        width: 600px;
+        object-fit: cover;
+    }
+
+    .container__principal {
+        padding: 1em 2em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container__principal {
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+
+    .container__principal {
+        padding: 2em 5em;
+    }
+
+    .principal__img {
+        width: 550px;
+    }
+
+    .container__principal__conteudo {
+        width: 50%;
+        padding: 0;
+    }
+
+    .container__principal__conteudo, .principal__texto {
+        text-align: left;
+    }
+
+    .main__xp section:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    .main__xp section:nth-child(3) .container__principal__conteudo, main section:nth-child(3) .container__principal__conteudo .principal__texto {
+        text-align: right;
+    }
+
+}
