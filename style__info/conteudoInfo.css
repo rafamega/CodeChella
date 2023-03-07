@@ -1,0 +1,39 @@
+.info__subtitulo {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    padding: 2em 2em;
+    line-height: 40px;
+    font-family: var(--fonte-secundaria);
+}
+
+/* Perguntas frequentes */
+
+.info__perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.info__perguntas__texto {
+    background-color: var(--roxo);
+    padding: .5em;
+    width: 80vw;
+    font-size: 32px;
+    font-weight: 700;
+    border: 1px solid var(--branco);
+}
+
+@media screen and (min-width: 768px) {
+    .info__subtitulo {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .info__subtitulo {
+        font-size: 48px;
+    }
+}
