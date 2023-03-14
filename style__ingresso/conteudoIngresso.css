@@ -1,0 +1,105 @@
+.ingresso__subtitulo {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    padding: 2em 1em;
+    line-height: 40px;
+    font-family: var(--fonte-secundaria);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    text-align: left;
+    margin: 0 2em; /* para quebrar a linha da "data de nascimento" */
+    margin-bottom: 2em;
+    
+    
+}
+
+.form__data {
+    margin-right: 1em;
+}
+
+label {
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #333;
+}
+
+input,
+select {
+    width: 80vw;
+    height: 38px;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    margin-top: .3em;
+    border-radius: 4px;
+    border: none;
+}
+
+select {
+    height: 40px;
+}
+
+ /* para deixar o valor inválido cinza, porque não funciona da mesma forma que o placeholder dos outros inputs */
+select:invalid { 
+    color: #858585;
+}
+
+/* para sumir com a opção inválida quando abrir o select */
+option[value=""][disabled] {
+    display: none;
+}
+
+/* para as opções aparecerem da cor preta quando abrir o select, se não elas aparecem da cor da option inválida */
+option {
+    color: black;
+}
+
+.ingresso__link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--roxo);
+    border: 1px solid var(--branco);
+    border-radius: 16px;
+    padding: .7em 1em;
+    margin: auto;
+    box-shadow: 4px 4px 2px #222;
+    width: 100px;
+}
+
+/* ------------------------------------------------------ */
+
+@media screen and (min-width: 768px) {
+    .ingresso__subtitulo {
+        font-size: 64px;
+        line-height: 60px;
+    }
+}
+
+/* ------------------------------------------------------ */
+
+@media screen and (min-width: 1440px) {
+    .formulario {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 8em;
+        row-gap: 2em;
+        column-gap: 1em;
+        justify-content: center;
+        padding-bottom: 2em;
+    }
+
+    .formulario__nome, .formulario__email, #nome, #email {
+        width: 61.5vw;
+    }
+
+    .formulario__ingresso, .formulario__data, #ingresso, #data {
+        width: 30vw;
+    }
+}

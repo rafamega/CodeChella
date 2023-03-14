@@ -46,7 +46,7 @@
     font-weight: 700;
     color: var(--branco);
     margin: auto;
-    box-shadow: 4px 4px #444444;
+    box-shadow: 4px 4px var(--cinza);
 }
 
 /* -------------------------------------------------- */

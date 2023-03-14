@@ -37,15 +37,42 @@
         </ul>
     </header>
 
-    <main>
+    <main ingresso__conteudo>
         <div class="banner__ingresso">
             <h1 class="banner__ingresso__texto">Garanta seu Ingresso</h1>
         </div>
 
-        
+        <h2 class="ingresso__subtitulo">Preencha o formulário a seguir</h2>
 
-        
-        
+        <form class="formulario">
+            <div class="formulario__nome">
+                <label for="nome">Nome Completo</label><br>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="formulario__email">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="formulario__ingresso">
+                <label for="ingresso">Tipo de ingresso</label><br>
+                <select name="" id="ingresso" required>
+                    <option id="oi" selected disabled value="">Tipo de ingresso</option>
+                    <option value="">Inteira</option>
+                    <option value="">Meia-entrada</option>
+                    <option value="">Promocional</option>
+                </select>
+            </div class="formulario__data">
+
+            <div>
+                <label class="form__data" for="data">Data de nascimento</label><br>
+                <input type="text" name="data" id="data" placeholder=" __/__/____">
+            </div>
+        </form>
+
+        <a class="ingresso__link" href="./qrcode.html">Avançar!</span></a><br>
+
     </main>
 
     <footer class="container__rodape">
